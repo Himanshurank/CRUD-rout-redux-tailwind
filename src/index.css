@@ -1,0 +1,436 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #454545;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 3rem;
+}
+/* navbar */
+
+.navbar {
+	width: 100vw;
+	height: 10vh;
+	background-color: #ff6000;
+	color: #fff;
+}
+.nav {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 5%;
+}
+
+.nav a {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.navmenu {
+	width: 40%;
+	display: flex;
+	padding: 0;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
+}
+
+.navmenu li {
+	margin-right: 20%;
+}
+
+.navmenu li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.navmenu li a:hover,
+.logout:hover {
+	color: #ffa559;
+}
+
+.logout {
+	cursor: pointer;
+	padding-inline: 0;
+	padding-block: 0;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+/* user table */
+
+.adduser {
+	width: 100vw;
+	height: 15vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.adduser .btn {
+	padding: 10px 25px;
+	font-size: 1rem;
+	margin: 50px;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.btn {
+	padding: 10px 20px;
+	background-color: #ff6000;
+	color: #ffffff;
+	font-weight: bold;
+	border: none;
+	border-radius: 4px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #ffa559;
+	color: #222222;
+	border: 2px solid #222222;
+}
+
+/* form style */
+h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin: 0;
+}
+
+form p {
+	margin: 2px 0 0 50px;
+	font-size: 0.8rem;
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.form-container {
+	background-image: url(./Assets/formbg.jpg);
+	background-size: cover;
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+}
+
+form {
+	backdrop-filter: blur(3px);
+	width: 30%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: #ff6000;
+	background-color: rgba(107, 107, 107, 0.2);
+	padding: 20px;
+	border-radius: 8px;
+}
+
+form:hover {
+	background-color: rgba(52, 52, 52, 0.2);
+}
+
+.usernavigation {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.input-comp {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+}
+
+.input-comp label {
+	font-weight: bold;
+	margin: 15px 0 5px 20px;
+}
+
+.input-comp input,
+.l-form input {
+	border: none;
+	outline: none;
+	background-color: #ffdcbe;
+	color: #222222;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+.l-form .button {
+	flex-direction: column;
+}
+
+.l-form .col {
+	flex-direction: row;
+}
+
+.button {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 20px;
+}
+
+.button .btn {
+	width: 100%;
+	padding: 10px 35px;
+}
+.l-form .newadd {
+	width: 100%;
+}
+
+.signup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.forgot {
+	width: 100%;
+	margin: -5px 0 15px 0;
+}
+
+.forgot a,
+.loginlink {
+	font-size: 0.9rem;
+	color: #debeff;
+}
+
+.loginlinkdiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.pre,
+.next {
+	cursor: pointer;
+	backdrop-filter: blur(3px);
+	background-color: rgba(218, 65, 0, 0.3);
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 30px 8px;
+	font-size: 1.3rem;
+	z-index: 9;
+}
+
+.pre:hover,
+.next:hover {
+	background-color: rgba(218, 65, 0, 0.2);
+}
+
+.pre {
+	position: absolute;
+	left: 30%;
+}
+
+.next {
+	position: absolute;
+	right: 30%;
+}
+
+.loginlink {
+	font-weight: bold;
+	font-size: 1.5rem;
+	background-color: #ff6000;
+	padding: 8px 15px;
+	border-radius: 4px;
+}
+
+.forgot a:hover,
+.loginlink:hover {
+	color: #fff;
+}
+
+/* Display user data table  */
+.table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.userdisplaytable {
+	width: 95vw;
+	background-color: #ff6000;
+	border-radius: 8px;
+	padding: 8px;
+}
+
+.userdisplaytable th {
+	color: #222222;
+	font-size: 1.4rem;
+	background-color: #ffa559;
+	border-radius: 4px;
+	padding: 5px 0;
+}
+
+.userdisplaytable td {
+	text-align: center;
+	background-color: rgba(255, 165, 89, 0.4);
+	color: #000000;
+	font-weight: 500;
+	font-size: 1.1rem;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+/* login container */
+.loginbody {
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login {
+	width: 95%;
+	height: 100%;
+	display: flex;
+	/* background-color: #ffdcbe; */
+}
+
+.l-img {
+	height: 100%;
+	width: 50%;
+	background-image: url(./Assets/loginimg.png);
+	background-size: 600px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.l-form {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.l-form form {
+	width: 50%;
+	height: 100%;
+	background-color: transparent;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.l-form p {
+	margin: 5px 0 0 0;
+	font-size: 1rem;
+	color: #ffa559;
+}
+
+.l-form form h2 {
+	width: 100%;
+	margin: 0 20px 50px 20px;
+	background-color: #ff6000;
+	padding: 10px 0;
+	border-radius: 6px;
+}
+
+hr {
+	width: 100%;
+}
+
+.l-form label {
+	font-weight: bold;
+	margin: 10px 0 5px 0;
+}
+
+.l-form .button {
+	width: 100%;
+	margin: 30px 20px 0 20px;
+	justify-content: space-between;
+}
+
+.edit {
+	margin: 5px;
+	background-color: #00920c;
+}
+
+.edit a {
+	color: #fff;
+}
+
+.delete {
+	margin: 5px;
+	background-color: #b00000;
+}
+
+/* deleteuser */
+
+.deletecard {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background-color: #ff6000;
+	color: #fff;
+	padding: 20px;
+	width: 50%;
+	height: 50%;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.card h1 {
+	margin: 0;
+}
+.card h2 {
+	font-size: 1.5rem;
+}
+
+.card h2 span {
+	color: #ffdcbe;
+}
+
+.deletecard .button {
+	margin: 0;
+}
+
+.button .cancel {
+	background-color: #c74c00;
+}
+
+.button .cancel:hover {
+	background-color: #ffa559;
+}

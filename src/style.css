@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-color: rgb(42, 42, 42);
+}
+
+.formbg {
+	background-image: url("./Assets/formbg.jpg");
+}

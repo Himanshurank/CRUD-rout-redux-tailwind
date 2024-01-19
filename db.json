@@ -1,0 +1,66 @@
+{
+  "usersdata": [
+    {
+      "name": "HIMANSHU JAYANTIBHAI RANK",
+      "email": "rankhimanshu@yahoo.com",
+      "phone": "9998656977",
+      "age": 28,
+      "id": 1
+    },
+    {
+      "name": "himanshu",
+      "email": "himanshu@hdk.com",
+      "phone": "5454886666",
+      "age": 12,
+      "id": 2
+    },
+    {
+      "name": "rahul patel",
+      "email": "rahulpatel@ddf.com",
+      "phone": "9865697550",
+      "age": 18,
+      "id": 4
+    },
+    {
+      "name": "jaydeep patoliya",
+      "email": "jaydeep@patoliya.com",
+      "phone": "8467937742",
+      "age": 45,
+      "id": 5
+    },
+    {
+      "name": "hardik topiya",
+      "email": "hardik@topiya.com",
+      "phone": "3956638739",
+      "age": 34,
+      "id": 6
+    },
+    {
+      "name": "ketan patel",
+      "email": "ketan@patel.au",
+      "phone": "6648848888",
+      "age": 44,
+      "id": 7
+    }
+  ],
+  "loginUsers": [
+    {
+      "username": "Himanshu",
+      "email": "rankhimanshu@yahoo.com",
+      "password": "himanshu",
+      "id": 1
+    },
+    {
+      "username": "Yash",
+      "email": "yash@gmail.com",
+      "password": "yash1",
+      "id": 2
+    },
+    {
+      "username": "rahul",
+      "email": "rahul@yahoo.com",
+      "password": "rahul",
+      "id": 3
+    }
+  ]
+}
