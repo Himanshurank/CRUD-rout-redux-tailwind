@@ -139,29 +139,29 @@ const UserForm = () => {
 		setPreBtn(true);
 	};
 	return (
-		<div className="formbg bg-cover w-screen h-91vh flex justify-center items-center">
+		<div className="formbg bg-cover w-screen h-90vh flex justify-center items-center">
 			{isEditable && (
 				<>
 					{preBtn && (
-						<button className="absolute left-1/3 z-10 text-white bg-orange-600 py-5 px-2 rounded-md bg-opacity-25 hover:bg-opacity-35" type="button" onClick={goPreviousUser}>
+						<button className="absolute left-4 z-10 text-white  bg-orange-600 py-5 px-2 rounded-md bg-opacity-25 hover:bg-opacity-35 sm:left-32 md:left-29%" type="button" onClick={goPreviousUser}>
 							{"<"}
 						</button>
 					)}
 				</>
 			)}
-			<form onSubmit={addNewUserDetail} className="flex flex-col px-8 justify-between h-4/5 w-1/4 bg-white rounded-lg bg-opacity-5 backdrop-blur-sm ">
+			<form onSubmit={addNewUserDetail} className="flex flex-col px-8 justify-between items-center  w-full mx-12 bg-white rounded-lg bg-opacity-5 backdrop-blur-sm  md:w-1/3 md:h-5/6 ">
 				<h2 className="text-white text-center m-4 text-3xl font-bold">User Form</h2>
-				<div className="flex flex-col text-center">
+				<div className="flex flex-col text-center md:w-full">
 					{inputProps.map((input) => {
 						return <UserInput key={input.name} value={input.value} error={input.error} name={input.name} placeholder={input.placeholder} type={input.type} onChange={input.onChange} />;
 					})}
 				</div>
 				{error && <p>{error.user}</p>}
-				<div className="flex justify-between mb-4 ">
-					<button type="submit" className="bg-orange-600 py-2 px-8 mt-6  text-white font-bold rounded-lg hover:bg-orange-800 ">
+				<div className="flex justify-between mb-4  space-x-2 md:w-full">
+					<button type="submit" className="bg-orange-600 py-2 px-6 mt-6  text-white font-bold rounded-lg hover:bg-orange-800 ">
 						Save
 					</button>
-					<button className="bg-orange-600 py-2 px-8 mt-6  text-white font-bold rounded-lg hover:bg-orange-800 " type="button" onClick={cancelAddUser}>
+					<button className="bg-orange-600 py-2 px-6 mt-6  text-white font-bold rounded-lg hover:bg-orange-800 " type="button" onClick={cancelAddUser}>
 						Cancel
 					</button>
 				</div>
@@ -169,7 +169,7 @@ const UserForm = () => {
 			{isEditable && (
 				<>
 					{nextBtn && (
-						<button className="absolute right-1/3 z-10 text-white bg-orange-600 py-5 px-2 rounded-md bg-opacity-25 hover:bg-opacity-35" type="button" onClick={goNextUser}>
+						<button className="absolute right-4 z-10 text-white bg-orange-600 py-5 px-2 rounded-md bg-opacity-25 hover:bg-opacity-35 sm:right-36 md:right-29%" type="button" onClick={goNextUser}>
 							{">"}
 						</button>
 					)}

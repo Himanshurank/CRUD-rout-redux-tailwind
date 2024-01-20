@@ -27,11 +27,11 @@ const DeleteUser = () => {
 		localStorage.removeItem("deleteName");
 	};
 	return (
-		<div className="h-91vh w-screen flex justify-around items-center">
-			<div className="h-1/3 w-1/2 flex flex-col justify-around items-center bg-orange-600 bg-opacity-40 rounded-lg">
-				<h1 className="text-white text-4xl font-bold">Are Your Sure Delete This User?</h1>
+		<div className="h-90vh w-screen flex justify-around items-center">
+			<div className="h-1/3 w-11/12 flex flex-col justify-around items-center bg-orange-600 bg-opacity-40 rounded-lg md:w-1/2">
+				<h1 className="text-white text-xl font-bold sm:text-3xl">Are Your Sure Delete This User?</h1>
 				<div>
-					<h2 className="text-white text-2xl">
+					<h2 className="text-white text-lg sm:text-2xl">
 						Name: <span className="text-orange-400 font-bold">{name}</span>
 					</h2>
 				</div>
