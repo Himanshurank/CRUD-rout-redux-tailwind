@@ -9,7 +9,7 @@ const UserEdit = () => {
 	// const userData = useSelector((state) => state.users.userData);
 	// const selectedUser = userData.filter((user) => user.id == updateId);
 
-	// /* eslint-disable */
+	/* eslint-disable */
 	const selUser = useLoaderData();
 
 	useEffect(() => {

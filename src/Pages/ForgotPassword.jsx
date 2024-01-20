@@ -76,13 +76,13 @@ const ForgotPassword = () => {
 	};
 
 	return (
-		<div className="flex justify-center items-center h-90vh w-screen">
-			<div className="w-1/2 flex justify-center items-center">
-				<img src={loginImg} className="w-4/5" alt="" />
+		<div className="flex flex-col justify-center items-center h-90vh w-screen sm:flex-row ">
+			<div className=" flex justify-center items-center sm:w-1/2 md:w-1/3">
+				<img src={loginImg} className="w-1/2 sm:w-full" alt="" />
 			</div>
-			<div className="mx-16 h-2/3 w-1/3 flex justify-center items-center">
-				<form onSubmit={(e) => formSubmit(e)} className="flex flex-col justify-between ">
-					<h2 className="text-center bg-orange-600 py-4 text-white text-2xl rounded-md my-5 font-bold">Forgot Password</h2>
+			<div className="mx-4 w-11/12 h-2/3  flex justify-center items-center sm:w-1/2 md:w-2/6 md:mx-24">
+				<form onSubmit={(e) => formSubmit(e)} className="flex flex-col justify-between w-full px-4 ">
+					<h2 className="text-center  bg-orange-600 py-2 text-white text-xl rounded-md my-3 font-bold md:py-4 md:text-3xl md:my-5 ">Forgot Password</h2>
 
 					{forgotEmailProperties.map((input) => (
 						<UserInput key={input.name} error={input.error} name={input.name} value={input.value} placeholder={input.placeholder} type={input.type} onChange={input.onChange} />
@@ -90,11 +90,11 @@ const ForgotPassword = () => {
 					{isEmailValid && forgotPasswordProperties.map((input) => <UserInput key={input.name} error={input.error} name={input.name} value={input.value} placeholder={input.placeholder} type={input.type} onChange={input.onChange} />)}
 
 					{error.valid && <p className="text-sm font-semibold py-1 mx-3 text-red-500">{error.valid}</p>}
-					<div className="space-x-4">
-						<button className="bg-orange-600 py-2 px-8 mt-6  text-white font-bold rounded-lg hover:bg-orange-800" type="submit">
+					<div className="space-x-4 flex ">
+						<button className="bg-orange-600 py-1 px-3 mt-3 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 md:my-2 md:py-2" type="submit">
 							{isEmailValid ? "Change Password" : "Check Email"}
 						</button>
-						<button className="bg-orange-600 py-2 px-8 mt-6  text-white font-bold rounded-lg hover:bg-orange-800" type="button" onClick={reset}>
+						<button className="bg-orange-600 py-1 px-3 mt-3 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 md:my-2 md:py-2" type="button" onClick={reset}>
 							Reset
 						</button>
 					</div>

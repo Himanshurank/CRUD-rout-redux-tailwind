@@ -99,13 +99,13 @@ const LoginSignUpForm = () => {
 
 	return (
 		<div className="flex justify-center items-center h-90vh w-screen ">
-			<div className="flex justify-center items-center h-full">
-				<div className="w-1/2 flex justify-center items-center">
-					<img src={loginImg} className="w-4/5" alt="" />
+			<div className="flex flex-col justify-center items-center h-full sm:flex-row">
+				<div className=" flex justify-center items-center sm:w-1/2 md:w-2/6">
+					<img src={loginImg} className="w-1/2 sm:w-full" alt="" />
 				</div>
-				<div className="mx-16 h-2/3 w-1/3 flex justify-center items-center">
-					<form onSubmit={(e) => formSubmit(e)} className="flex flex-col  h-full w-10/12 ">
-						<h2 className="text-center bg-orange-600 py-4 text-white text-2xl rounded-md my-5 font-bold ">{isLogin ? "Login" : "Create New Account"}</h2>
+				<div className="mx-4 h-2/3 w-full  flex justify-center items-center sm:w-1/2 md:w-2/6 md:mx-24">
+					<form onSubmit={(e) => formSubmit(e)} className="flex flex-col  h-full w-10/12">
+						<h2 className="text-center  bg-orange-600 py-2 text-white text-xl rounded-md my-3 font-bold md:py-4 md:text-3xl md:my-5">{isLogin ? "Login" : "Create New Account"}</h2>
 						{isLogin && loginInputProperties.map((input) => <UserInput key={input.name} error={input.error} name={input.name} value={input.value} placeholder={input.placeholder} type={input.type} onChange={input.onChange} />)}
 						{!isLogin && (
 							<>
@@ -117,30 +117,29 @@ const LoginSignUpForm = () => {
 						{error.login && <p className="text-sm font-semibold py-1 mx-3 text-red-500">{error.login}</p>}
 						{error.existing && <p className="text-sm font-semibold py-1 mx-3 text-red-500">{error.existing}</p>}
 						{error.alreadylogin && <p className="text-sm font-semibold py-1 mx-3 text-red-500">{error.alreadylogin}</p>}
-						<div className={isLogin ? "button" : "signup"}>
-							<div className="flex justify-center items-center space-x-3">
-								<button className="bg-orange-600 py-2 px-8 mt-6 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 " type="submit">
-									{isLogin ? "Login" : "Sign Up"}
+
+						<div className="flex justify-center items-center space-x-3 ">
+							<button className="bg-orange-600 py-1 px-3 mt-3 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 md:my-2 md:py-2 " type="submit">
+								{isLogin ? "Login" : "Sign Up"}
+							</button>
+							{!isLogin && (
+								<button className="bg-orange-600 py-1 px-3 mt-3 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 md:my-2 md:py-2" type="button" onClick={reset}>
+									Reset
 								</button>
-								{!isLogin && (
-									<button className="bg-orange-600 py-2 px-8 mt-6 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 " type="button" onClick={reset}>
-										Reset
-									</button>
-								)}
-							</div>
-							{isLogin && (
-								<>
-									<div className="text-center text-purple-800 font-bold my-4 hover:text-purple-900">
-										<Link to={"/forgot"}>Forgot Password</Link>
-									</div>
-								</>
 							)}
-							<hr className="p-1px mt-3 bg-orange-300" />
-							<div className="flex justify-center items-center">
-								<button className=" bg-orange-600 py-2 px-8 mt-6 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 " type="button" onClick={cancelBtn}>
-									{isLogin ? "Create New Account" : "Login Page"}
-								</button>
-							</div>
+						</div>
+						{isLogin && (
+							<>
+								<div className="text-center text-purple-800 font-bold my-1 hover:text-purple-900">
+									<Link to={"/forgot"}>Forgot Password</Link>
+								</div>
+							</>
+						)}
+						<hr className="p-1px mt-3 bg-orange-300" />
+						<div className="flex justify-center items-center">
+							<button className=" bg-orange-600 py-1 px-3 mt-4 w-4/5 text-white font-bold rounded-lg hover:bg-orange-800 md:my-2 md:py-2" type="button" onClick={cancelBtn}>
+								{isLogin ? "Create New Account" : "Login Page"}
+							</button>
 						</div>
 					</form>
 				</div>

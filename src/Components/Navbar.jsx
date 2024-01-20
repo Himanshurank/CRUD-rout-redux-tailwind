@@ -17,11 +17,11 @@ const Navbar = () => {
 	};
 	return (
 		<div className="bg-orange-600 h-16 flex items-center ">
-			<div className="w-screen flex justify-between items-center ">
-				<Link to={isAdmin ? `/home/${localStorage.getItem("id")}` : "/login"} className="text-white text-3xl font-bold mx-10">
+			<div className="w-screen flex flex-col justify-between items-center sm:flex-row ">
+				<Link to={isAdmin ? `/home/${localStorage.getItem("id")}` : "/login"} className="text-white text-xl font-bold mx-6 sm:w-full sm:text-4xl">
 					Hi. {adminName ? adminName : ""}
 				</Link>
-				<ul className="flex text-white text-xl font-bold space-x-16 mx-20">
+				<ul className="flex justify-around text-white text-lg font-bold  w-full sm:justify-end sm:space-x-16 sm:mr-16 sm:text-xl">
 					{isAdmin && (
 						<li>
 							<Link to={`/home/${localStorage.getItem("id")}`}>Home</Link>

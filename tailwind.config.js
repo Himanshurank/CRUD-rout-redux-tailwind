@@ -11,6 +11,9 @@ module.exports = {
 			padding: {
 				"1px": "1px",
 			},
+			spacing: {
+				"29%": "29%",
+			},
 		},
 	},
 	plugins: [],
